@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events Page</title>
+    <link rel="stylesheet" href="static/css/filter.css">
+    <link rel="stylesheet" href="static/css/styles.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            
+            <button class="nav-btn" onclick="redirectToIndex()">Home</button>
+            <div class="dropdown">
+                <button class="nav-btn">Services</button>
+                    <div class="dropdown-content">
+                        <button>Fitness Era</button>
+                        <button>YSK learners</button>
+                    </div>
+            </div>
+
+            <button class="nav-btn" id="about">About</button>
+
+            <div class="dropdown">
+                <button class="nav-btn">Departments</button>
+                <div class="dropdown-content">
+                    <div class="dropdown-item">
+                        <button>Life Savers</button>
+                        <div class="sub-dropdown">
+                            <button>Blood Donation</button>
+                            <button>Hair Donation</button>
+                        </div>
+                    </div>
+                    <div class="dropdown-item">
+                        <button>Kindness Closet</button>
+                        <div class="sub-dropdown">
+                            <button>Books</button>
+                            <button>Used Clothes</button>
+                            <button>Stationaries</button>
+                            <button>Toys</button>
+                            <button>Electronics</button>
+                        </div>
+                    </div>
+                    <div class="dropdown-item">
+                        <button>Green Guardians</button>
+                        <div class="sub-dropdown">
+                            <button>Tree Plantation</button>
+                            <button>Seeds and Samplings</button>
+                        </div>
+                    </div>
+                    <div class="dropdown-item">
+                        <button>Clean & Care Crew</button>
+                        <div class="sub-dropdown">
+                            <button>Cleaning Drives</button>
+                            <button>Hygiene Initiatives</button>
+                        </div>
+                    </div>
+                    <div class="dropdown-item">
+                        <button>Bright Futures</button>
+                        <div class="sub-dropdown">
+                            <button>Teaching</button>
+                            <button>Education Support</button>
+                            <button>Skill Building workshops</button>
+                        </div>
+                    </div>
+                    <div class="dropdown-item">
+                        <button>Heart to Hand</button>
+                        <div class="sub-dropdown">
+                            <button>Excess Foods</button>
+                            <button>Groceries</button>
+                            <button>Non-Perishable Items</button>
+                        </div>
+                    </div>
+                    <div class="dropdown-item">
+                        <button>Wheels of Change</button>
+                        <div class="sub-dropdown">
+                            <button>Volunteering</button>
+                            <button>Services</button>
+                            <button>Space for Events</button>
+                            <button>Transport</button>
+                        </div>
+                    </div>
+                    <div class="dropdown-item">
+                        <button>Bright Ideas Hub</button>
+                        <div class="sub-dropdown">
+                            <button>Software and Tools</button>
+                            <button>Creative Ideas</button>
+                            <button>Connections and Networks</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            
+            <div class="dropdown">
+                <button class="nav-btn">Life Hacks</button>
+                <div class="dropdown-content">
+                    <button>Career Guidance</button>
+                    <button>Cheat Sheet</button>
+                    <button>Events</button>
+                </div>
+            </div>
+            
+            <div class="dropdown">
+                <button class="nav-btn">Support</button>
+                <div class="dropdown-content">
+                    <button>Donate</button>
+                    <button>Volunteer</button>
+                    <button id="contact">Contact Us</button>
+                </div>
+            </div>
+            <button class="signIn" style="background-color: red; color: white; font-weight: bolder; font-size: 17px; ">Sign In</button>
+        </nav>
+    </header>
+
+
+
+<section>
+    <div class="container">
+        <!-- Filter Section -->
+        <aside class="filter-section">
+            <h2>Filter Events</h2>
+            <div class="filter">
+                <label for="date-range">Date Range:</label>
+                <input type="date" id="start-date" placeholder="Start Date">
+                <input type="date" id="end-date" placeholder="End Date">
+            </div>
+            <div class="filter">
+                <label for="place">Place:</label>
+                <select id="place">
+                    <option value="">All Places</option>
+                    <option value="New York">New York</option>
+                    <option value="Los Angeles">Los Angeles</option>
+                    <option value="Chicago">Chicago</option>
+                </select>
+            </div>
+            <button class="filter-btn" onclick="applyFilters()">Apply Filters</button>
+        </aside>
+
+        <!-- Main Content -->
+        <main>
+            <header class="main-header">
+                <button class="view-toggle-btn" onclick="toggleView()">Toggle View</button>
+            </header>
+            <section id="events-area" class="grid-view">
+                <!-- Dynamic Event Blocks -->
+            </section>
+            <div class="pagination">
+                <button onclick="prevPage()">Previous</button>
+                <span id="page-number">Page 1</span>
+                <button onclick="nextPage()">Next</button>
+            </div>
+        </main>
+    </div>
+
+</section>
+    <script src="static/js/filter.js"></script>
+    <script src="static/js/script.js"></script>
+</body>
+</html>
