@@ -1,0 +1,207 @@
+
+/* LOGO Design */
+/* Link to Google Font for a stylish font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+.logo {
+    font-size: 48px; /* Increase font size for more prominence */
+    font-weight: 700; /* Use bold weight for a strong look */
+    color: #000000;
+    text-transform: uppercase; /* Make the logo text all caps */
+    letter-spacing: 5px; /* Increase letter spacing for a wider and more elegant look */
+    font-family: 'Poppins', sans-serif; /* Stylish, modern font */
+    display: flex;
+    justify-content: center; /* Center the logo */
+    align-items: center;
+    padding: 40px;
+    position: relative;
+    z-index: 1;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition effects */
+}
+
+/* Hover effect to make the logo interactive */
+.logo:hover {
+    transform: scale(1.1); /* Slightly enlarge the logo on hover */
+    color: #FFD700; /* Change color on hover */
+}
+
+/* Animation for a stylish entrance (Fade-in and slide effect) */
+@keyframes logo-animation {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px); /* Slide in from the top */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* End at original position */
+    }
+}
+
+.logo {
+    animation: logo-animation 1s ease-out; /* Apply animation */
+}
+
+/* Glowing effect on hover */
+.logo:hover {
+    text-shadow: 0px 0px 15px rgba(98, 79, 135, 0.8); /* Add glowing effect on hover */
+}
+
+
+main .metal_background{
+    background: linear-gradient(135deg, #ffffff, #D4AF37, #ffffff);
+    background-size: 400% 400%;
+    animation: metallic-shine 6s infinite;
+}
+@keyframes metallic-shine {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 100%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+/* Department Icons */
+.department-icons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Four icons per row */
+    gap: 20px;
+    padding: 75px;
+    justify-items: center; /* Center align items horizontally */
+}
+
+.box {
+    background-color: #000000;
+    text-align: center;
+    border: 1px solid #000000;
+    width: 120px; /* Ensure width and height are the same for circular shape */
+    height: 120px;
+    border-radius: 50%; /* Makes the box circular */
+    display: flex;
+    flex-direction: column; /* Allows stacking of elements */
+    align-items: center;
+    justify-content: center;
+    box-shadow: 6px 4px 6px rgba(0, 0, 0, 0.51);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    position: relative;
+}
+
+.box img {
+    width: 115px;
+    height: 115px;
+    border-radius: 50%; /* Makes the icon circular */
+    object-fit: cover; /* Ensures the image fits within the circle */
+}
+
+.icons h3 {
+    font-size: 20px;
+    color: #000000;
+    margin-top: 10px;
+    text-align: center;
+    position: relative;
+    top: 10px; /* Push the text outside the circle */
+}
+
+.box:hover {
+    transform: scale(1.05);
+    background-color: #e6ffe6;
+}
+
+.box::after {
+    content: attr(data-description);
+    position: absolute;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s linear 0.3s, opacity 0.3s linear;
+}
+
+.box:hover::after {
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0s;
+}
+
+
+/* Department Details */
+.department-details .detail-block {
+    display: flex;
+    align-items: center;
+    background-color: #D4AF37;
+    padding: 20px;
+    gap: 20px;
+}
+
+.detail-block:hover{
+    background: linear-gradient(135deg, #ffffff, #D4AF37, #ffffff);
+    background-size: 400% 400%;
+    animation: image-metallic-shine 6s infinite;
+}
+@keyframes image-metallic-shine {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 100%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+}
+
+
+.department-details .detail-block img {
+    width: 300px;
+    height: 300px;
+    border-radius: 150px;
+}
+
+.department-details .detail-block img:hover {
+    transform: scale(1.05);
+    background-color: #e6ffe6;
+    transition: transform 0.5s ease, background-color 0.5s ease;
+}
+
+.department-details .detail-block.reverse {
+    flex-direction: row-reverse;
+    color: white;
+    background-color: black;
+}
+
+.detail-block.reverse:hover{
+    background: linear-gradient(135deg, #ffffff, #000000, #ffffff);
+    background-size: 400% 400%;
+    animation: image-metallic-shine 6s infinite;
+
+}
+@keyframes image-metallic-shine {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 100%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    /* margin-top: 20px; */
+}

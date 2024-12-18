@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YSK NGO</title>
+    <link rel="stylesheet" href="static/css/styles.css">
+    <link rel="stylesheet" href="static/css/index.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav>
+            
+            <button class="nav-btn">Home</button>
+            <div class="dropdown">
+                <button class="nav-btn">Services</button>
+                    <div class="dropdown-content">
+                        <button>Fitness Era</button>
+                        <button>YSK learners</button>
+                    </div>
+            </div>
+
+            <button class="nav-btn" id="about">About</button>
+
+            <div class="dropdown">
+                <button class="nav-btn">Departments</button>
+                <div class="dropdown-content">
+                    <div class="dropdown-item">
+                        <button>Life Savers</button>
+                        <div class="sub-dropdown">
+                            <button onclick="redirectLifeSaver(event)">Blood Donation</button>
+                            <button>Hair Donation</button>
+                        </div>
+                    </div>
+                    <div class="dropdown-item">
+                        <button>Kindness Closet</button>
+                        <div class="sub-dropdown">
+                            <button>Books</button>
+                            <button>Used Clothes</button>
+                            <button>Stationaries</button>
+                            <button>Toys</button>
+                            <button>Electronics</button>
+                        </div>
+                    </div>
+                    <div class="dropdown-item">
+                        <button>Green Guardians</button>
+                        <div class="sub-dropdown">
+                            <button onclick="redirectLifeSaver(event)">Tree Plantation</button>
+                            <button>Seeds and Samplings</button>
+                        </div>
+                    </div>
+                    <div class="dropdown-item">
+                        <button>Clean & Care Crew</button>
+                        <div class="sub-dropdown">
+                            <button onclick="redirectLifeSaver(event)">Cleaning Drives</button>
+                            <button>Hygiene Initiatives</button>
+                        </div>
+                    </div>
+                    <div class="dropdown-item">
+                        <button>Bright Futures</button>
+                        <div class="sub-dropdown">
+                            <button onclick="redirectLifeSaver(event)">Teaching</button>
+                            <button onclick="redirectLifeSaver(event)">Education Support</button>
+                            <button onclick="redirectLifeSaver(event)">Skill Building workshops</button>
+                        </div>
+                    </div>
+                    <div class="dropdown-item">
+                        <button>Heart to Hand</button>
+                        <div class="sub-dropdown">
+                            <button>Excess Foods</button>
+                            <button>Groceries</button>
+                            <button>Non-Perishable Items</button>
+                        </div>
+                    </div>
+                    <div class="dropdown-item">
+                        <button>Wheels of Change</button>
+                        <div class="sub-dropdown">
+                            <button>Volunteering</button>
+                            <button>Services</button>
+                            <button>Space for Events</button>
+                            <button>Transport</button>
+                        </div>
+                    </div>
+                    <div class="dropdown-item">
+                        <button>Bright Ideas Hub</button>
+                        <div class="sub-dropdown">
+                            <button>Software and Tools</button>
+                            <button>Creative Ideas</button>
+                            <button>Connections and Networks</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            
+            <div class="dropdown">
+                <button class="nav-btn">Life Hacks</button>
+                <div class="dropdown-content">
+                    <button>Career Guidance</button>
+                    <button>Cheat Sheet</button>
+                    <button>Events</button>
+                </div>
+            </div>
+            
+            <div class="dropdown">
+                <button class="nav-btn">Support</button>
+                <div class="dropdown-content">
+                    <button>Donate</button>
+                    <button>Volunteer</button>
+                    <button id="contact">Contact Us</button>
+                </div>
+            </div>
+            <button class="signIn" style="background-color: red; color: white; font-weight: bolder; font-size: 17px; ">Sign In</button>
+        </nav>
+    </header>
+    
+    <!-- Main Section -->
+    <main>
+        <div class="metal_background">
+        <!-- Department Boxes -->
+        <div class="logo">YSK Foundation</div>
+        <section class="department-icons">
+            <div class="icons" onclick="redirectLifeSaver(event)" id="lifeSaver">
+                <div class="box" data-description="Join our mission to save lives through blood and hair donations.">
+                    <img src="static\sources\lifesaver.webp" alt="Life Savers">
+                </div>
+                <h3>Life Savers</h3>
+            </div>
+            <div class="icons" onclick="redirectLifeSaver(event)">
+                <div class="box" data-description="Donate clothes, books, and toys to bring joy to those in need.">
+                    <img src="static\sources\kindnesscloset.webp" alt="Kindness Closet">
+                </div>
+                <h3>Kindness Closet</h3>
+            </div>
+            <div class="icons" onclick="redirectLifeSaver(event)">
+                <div class="box" data-description="Make the world greener with tree plantations and gardening.">
+                    <img src="static\sources\greenguardians.webp" alt="Green Guardians">
+                </div>
+                <h3>Green Guardians</h3>
+            </div>
+            <div class="icons" onclick="redirectLifeSaver(event)">
+                <div class="box" data-description="Help us keep our environment clean and safe.">
+                    <img src="static\sources\cleanandcare.png" alt="Clean & Care Crew">
+                </div>
+                <h3>Clean & Care Crew</h3>
+            </div>
+            <div class="icons" onclick="redirectLifeSaver(event)">
+                <div class="box" data-description="Empower bright futures through education and workshops.">
+                    <img src="static\sources\cleanandcare.png" alt="Bright Futures">
+                </div>
+                <h3>Bright Futures</h3>
+            </div>
+            <div class="icons" onclick="redirectLifeSaver(event)">
+                <div class="box" data-description="Extend a hand with food donations to those in need.">
+                    <img src="static\sources\greenguardians.webp" alt="Heart to Hand">
+                </div>
+                <h3>Heart to Hand</h3>
+            </div>
+            <div class="icons" onclick="redirectLifeSaver(event)">
+                <div class="box" data-description="Provide space, transport, and your time to volunteers.">
+                    <img src="static\sources\lifesaver.webp" alt="Wheels of Change">
+                </div>
+                <h3>Wheels of Change</h3>
+            </div>
+            <div class="icons" onclick="redirectLifeSaver(event)">
+                <div class="box" data-description="Fuel innovation with software, ideas, and recycling initiatives.">
+                    <img src="static\sources\kindnesscloset.webp" alt="Bright Ideas Hub">
+                </div>
+                <h3>Bright Ideas Hub</h3>
+            </div>
+        </section>
+    </div>
+
+        <!-- Department Descriptions -->
+        <section class="department-details" id="department-details">
+            <div class="detail-block reverse">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas dolorum reiciendis nobis adipisci similique a quisquam obcaecati illum itaque ea molestiae, incidunt nemo commodi alias iure sequi dicta deleniti vel necessitatibus suscipit libero voluptate minima ducimus. Neque fugit quam earum consequuntur ullam accusantium aliquid itaque velit eligendi, obcaecati in pariatur, deleniti ea impedit sit porro dolor, officiis ipsam ut. Quibusdam, beatae amet dolorem cum, voluptate expedita recusandae at ipsa molestias temporibus exercitationem laborum eveniet! Deserunt pariatur vero maxime non error, nemo amet aliquid libero unde repudiandae voluptates beatae corporis similique eos ipsum repellat eaque asperiores. Odio laborum quis soluta blanditiis.</p>
+                <img src="static\sources\ysk.jpg" alt="YSK dawww">
+            </div>
+            <div class="detail-block">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas dolorum reiciendis nobis adipisci similique a quisquam obcaecati illum itaque ea molestiae, incidunt nemo commodi alias iure sequi dicta deleniti vel necessitatibus suscipit libero voluptate minima ducimus. Neque fugit quam earum consequuntur ullam accusantium aliquid itaque velit eligendi, obcaecati in pariatur, deleniti ea impedit sit porro dolor, officiis ipsam ut. Quibusdam, beatae amet dolorem cum, voluptate expedita recusandae at ipsa molestias temporibus exercitationem laborum eveniet! Deserunt pariatur vero maxime non error, nemo amet aliquid libero unde repudiandae voluptates beatae corporis similique eos ipsum repellat eaque asperiores. Odio laborum quis soluta blanditiis.</p>
+                <img src="static\sources\ysk.jpg" alt="YSK dawww">
+            </div>
+            <div class="detail-block reverse">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas dolorum reiciendis nobis adipisci similique a quisquam obcaecati illum itaque ea molestiae, incidunt nemo commodi alias iure sequi dicta deleniti vel necessitatibus suscipit libero voluptate minima ducimus. Neque fugit quam earum consequuntur ullam accusantium aliquid itaque velit eligendi, obcaecati in pariatur, deleniti ea impedit sit porro dolor, officiis ipsam ut. Quibusdam, beatae amet dolorem cum, voluptate expedita recusandae at ipsa molestias temporibus exercitationem laborum eveniet! Deserunt pariatur vero maxime non error, nemo amet aliquid libero unde repudiandae voluptates beatae corporis similique eos ipsum repellat eaque asperiores. Odio laborum quis soluta blanditiis.</p>
+                <img src="static\sources\ysk.jpg" alt="YSK dawww">
+            </div>
+            <div class="detail-block">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas dolorum reiciendis nobis adipisci similique a quisquam obcaecati illum itaque ea molestiae, incidunt nemo commodi alias iure sequi dicta deleniti vel necessitatibus suscipit libero voluptate minima ducimus. Neque fugit quam earum consequuntur ullam accusantium aliquid itaque velit eligendi, obcaecati in pariatur, deleniti ea impedit sit porro dolor, officiis ipsam ut. Quibusdam, beatae amet dolorem cum, voluptate expedita recusandae at ipsa molestias temporibus exercitationem laborum eveniet! Deserunt pariatur vero maxime non error, nemo amet aliquid libero unde repudiandae voluptates beatae corporis similique eos ipsum repellat eaque asperiores. Odio laborum quis soluta blanditiis.</p>
+                <img src="static\sources\ysk.jpg" alt="YSK dawww">
+            </div>
+            <div class="detail-block reverse">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas dolorum reiciendis nobis adipisci similique a quisquam obcaecati illum itaque ea molestiae, incidunt nemo commodi alias iure sequi dicta deleniti vel necessitatibus suscipit libero voluptate minima ducimus. Neque fugit quam earum consequuntur ullam accusantium aliquid itaque velit eligendi, obcaecati in pariatur, deleniti ea impedit sit porro dolor, officiis ipsam ut. Quibusdam, beatae amet dolorem cum, voluptate expedita recusandae at ipsa molestias temporibus exercitationem laborum eveniet! Deserunt pariatur vero maxime non error, nemo amet aliquid libero unde repudiandae voluptates beatae corporis similique eos ipsum repellat eaque asperiores. Odio laborum quis soluta blanditiis.</p>
+                <img src="static\sources\ysk.jpg" alt="YSK dawww">
+            </div>
+            <div class="detail-block">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas dolorum reiciendis nobis adipisci similique a quisquam obcaecati illum itaque ea molestiae, incidunt nemo commodi alias iure sequi dicta deleniti vel necessitatibus suscipit libero voluptate minima ducimus. Neque fugit quam earum consequuntur ullam accusantium aliquid itaque velit eligendi, obcaecati in pariatur, deleniti ea impedit sit porro dolor, officiis ipsam ut. Quibusdam, beatae amet dolorem cum, voluptate expedita recusandae at ipsa molestias temporibus exercitationem laborum eveniet! Deserunt pariatur vero maxime non error, nemo amet aliquid libero unde repudiandae voluptates beatae corporis similique eos ipsum repellat eaque asperiores. Odio laborum quis soluta blanditiis.</p>
+                <img src="static\sources\ysk.jpg" alt="YSK dawww">
+            </div>
+            <div class="detail-block reverse">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas dolorum reiciendis nobis adipisci similique a quisquam obcaecati illum itaque ea molestiae, incidunt nemo commodi alias iure sequi dicta deleniti vel necessitatibus suscipit libero voluptate minima ducimus. Neque fugit quam earum consequuntur ullam accusantium aliquid itaque velit eligendi, obcaecati in pariatur, deleniti ea impedit sit porro dolor, officiis ipsam ut. Quibusdam, beatae amet dolorem cum, voluptate expedita recusandae at ipsa molestias temporibus exercitationem laborum eveniet! Deserunt pariatur vero maxime non error, nemo amet aliquid libero unde repudiandae voluptates beatae corporis similique eos ipsum repellat eaque asperiores. Odio laborum quis soluta blanditiis.</p>
+                <img src="static\sources\ysk.jpg" alt="YSK dawww">
+            </div>
+            <div class="detail-block">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas dolorum reiciendis nobis adipisci similique a quisquam obcaecati illum itaque ea molestiae, incidunt nemo commodi alias iure sequi dicta deleniti vel necessitatibus suscipit libero voluptate minima ducimus. Neque fugit quam earum consequuntur ullam accusantium aliquid itaque velit eligendi, obcaecati in pariatur, deleniti ea impedit sit porro dolor, officiis ipsam ut. Quibusdam, beatae amet dolorem cum, voluptate expedita recusandae at ipsa molestias temporibus exercitationem laborum eveniet! Deserunt pariatur vero maxime non error, nemo amet aliquid libero unde repudiandae voluptates beatae corporis similique eos ipsum repellat eaque asperiores. Odio laborum quis soluta blanditiis.</p>
+                <img src="static\sources\ysk.jpg" alt="YSK dawww">
+            </div>
+            <!-- Add similar blocks for the other departments -->
+        </section>
+    </main>
+    <footer id="footer">
+        <h3>Contact Us</h3>
+        <p>Email: contact@ngoname.org</p>
+        <p>Phone: +91-9876543210</p>
+        <p>Address: 123 NGO Street, Chennai, India</p>
+    </footer>
+
+    <!-- Footer Section -->
+    <script src="static/js/script.js"></script>
+</body>
+</html>

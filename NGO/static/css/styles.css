@@ -1,0 +1,117 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    
+    color: #333;
+}
+
+/* General Header Styling */
+header {
+    background-color: #ff9e37;
+    color: white;
+    display: flex;
+    justify-content:end;  /* This keeps space between elements */
+    align-items: center;
+}
+
+/* Navigation Button Styling */
+.nav-btn {
+    font-size: 16px;
+    background: #ff9e37;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Navigation Button Hover Effect */
+.nav-btn:hover {
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.7);
+    background-color: white;
+    color: #ff9e37;
+}
+
+/* Sign-In Button Styling */
+.signIn {
+    font-size: 16px;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    background-color: red;
+    color: white;
+    font-weight: bolder;
+    font-size: 17px;
+}
+.signIn:hover{
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.7);
+}
+
+
+
+/* Dropdown Container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 10;
+    min-width: 200px;
+}
+
+/* Dropdown Item */
+.dropdown-item {
+    position: relative;
+}
+
+/* Sub-dropdown */
+.sub-dropdown {
+    display: none;
+    position: absolute;
+    left: 100%; /* Position it to the right of the parent */
+    top: 0;
+    background-color: #fff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    min-width: 150px;
+    z-index: 10;
+}
+
+/* Button Styling */
+.dropdown-content button, .sub-dropdown button {
+    background: #f9f9f9;
+    color: #333;
+    border: none;
+    padding: 10px;
+    text-align: left;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-content button:hover, .sub-dropdown button:hover {
+    background-color: #ff9e37;
+    color: white;    
+}
+
+
+/* Show Dropdown on Hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Show Sub-dropdown on Hover */
+.dropdown-item:hover .sub-dropdown {
+    display: block;
+}
